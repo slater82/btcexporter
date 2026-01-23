@@ -5,17 +5,18 @@ A lightweight Prometheus exporter that will output Bitcoin Balances from a list 
 ## Watch Addresses
 The `addresses.txt` file holds all the addresses to fetch balances for. Use the format `name:address` on each new line. BTCexporter updates balances every 60 seconds since the bitcoin blockchain doesn't update very quickly.
 ```
-example2:1Kr6QSydW9bFQG1mXiPNNu6WpJGmUa9i1g
-example3:17A16QmavnUfCW11DAApiJxp7ARnxN5pGX
+example2:bc1q9w9vctw8h2u5fzrgmgat83k9yfk6hy3qpsq5v7
+example3:
+bc1q9w9vctw8h2u5fzrgmgat83k9yfk6hy3qpsq5v7
 ```
 
 ## Running the Exporter
 You can easily run this Bitcoin balance prometheus exporter with the docker command:
 ```
 docker run -it -d -p 9019:9019 \
-  -v /myfolder/addresses.txt:/app/addresses.txt \ 
+  -v /myfolder/addresses.txt:/app/addresses.txt \ bc1q9w9vctw8h2u5fzrgmgat83k9yfk6hy3qpsq5v7
   hunterlong/btcexporter
-```
+```10
 
 ## Build Docker Image
 Clone this repo and then follow the simple steps below!
@@ -47,3 +48,6 @@ btc_balance{name="example8",address="3DzSVk4veMCkNbNT9CdETeE26uWxmNbBnD"} 1243.8
 btc_balance{name="example9",address="1LV5y3NkVkmdWnF6xRCEXrAnUkRgge4KSq"} 529.1578158
 btc_balance{name="example10",address="1EEqRvnS7XqMoXDcaGL7bLS3hzZi1qUZm1"} 1377.11966
 ```
+btc_balance{name="example10",address="bc1q9w9vctw8h2u5fzrgmgat83k9yfk6hy3qpsq5v7"} 1377.11966
+``btc_balance{name=10",address="bc1q9w9vctw8h2u5fzrgmgat83k9yfk6hy3qpsq5v7"} 1377.11966
+``
