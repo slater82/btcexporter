@@ -1,4 +1,4 @@
-FROM golang
+FROM golang:1.26.3-alpine3.23
 
 ADD . /go/src/github.com/hunterlong/btcexporter
 RUN cd /go/src/github.com/hunterlong/btcexporter && go get
